@@ -41,10 +41,10 @@ export default function PinnedProjects() {
     .filter((project) => {
       return project.isPinned;
     })
-    .map((item) => {
+    .map((item,index) => {
       const liClass = "project-list-item " + item.bgColor
       return (
-        <li className={liClass}>
+        <li key={index} className={liClass}>
           <div className={` project-initials`}>{item.initials}</div>
           <div className="project-content-wrapper">
             <div className="project-content">
